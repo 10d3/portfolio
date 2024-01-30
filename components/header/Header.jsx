@@ -1,7 +1,13 @@
 import './header.css'
 import logo from '../../public/potrait.webp'
-function Header() {
 
+
+function Header() {
+  const info ={
+    name: 'Marc-Herley Antoine',
+    title: 'Front-End Developer',
+    location: 'In Haiti'
+  }
   const links = ['Home', 'About', 'Blog', 'Projects', 'Contact']
   const social = [
     {
@@ -18,14 +24,20 @@ function Header() {
     },
     {
       icon: "fa-solid fa-inbox",
-      link: ""
+      link: "mailto:marcherleyantoine@gmail.com.com"
     }
   ]
 
   return (
     <div className="main-header">
-      <div className='img-header'>
-        <img src={logo} alt="" />
+      <div className='all'>
+        <div className='img-header'>
+          <img src={logo} alt="" />
+        </div>
+        <div>
+          <h3>{info.name}</h3>
+          <p>{info.title} {info.location}</p>
+        </div>
       </div>
       <div className='nav'>
         <ul>
