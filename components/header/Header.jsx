@@ -1,5 +1,6 @@
 import './header.css'
 import logo from '../../public/potrait.webp'
+import { Link } from 'react-router-dom'
 
 
 function Header() {
@@ -8,7 +9,28 @@ function Header() {
     title: 'Front-End Developer',
     location: 'In Haiti'
   }
-  const links = ['Home', 'About', 'Blog', 'Projects', 'Contact']
+  const links = [
+    {
+      navlink: 'Home',
+      path: '/'
+    },
+    {
+      navlink: 'About',
+      path: '/about'
+    },
+    {
+      navlink: 'Blog',
+      path: '/blog'
+    },
+    {
+      navlink: 'Projects',
+      path: '/projects'
+    },
+    {
+      navlink: 'Contact',
+      path: '/contact'
+    }
+  ]
   const social = [
     {
       icon: "fa-brands fa-github",
@@ -43,7 +65,7 @@ function Header() {
         <ul>
           {
             links.map((element, index) => {
-              return <li key={index}><a className='navlink' href="#">{element}</a></li>
+              return <li key={index}><Link to={element.path} className='navlink' href="#">{element.navlink}</Link></li>
             })
           }
         </ul>
