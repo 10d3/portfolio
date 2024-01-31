@@ -1,5 +1,5 @@
 import './header.css'
-import logo from '../../src/potrait.webp'
+import logo from '../../src/assets/potrait.webp'
 import { NavLink } from 'react-router-dom'
 
 
