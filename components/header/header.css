@@ -37,6 +37,9 @@
   height: auto;
   border-radius: 50%;
 }
+.main-header .all div span{
+  color: var(--background);
+}
 
 .nav ul {
   list-style: none;

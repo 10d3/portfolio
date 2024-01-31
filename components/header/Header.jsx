@@ -1,5 +1,5 @@
 import './header.css'
-import logo from '../../src/assets/potrait.webp'
+import logo from '../../src/assets/logo.png'
 import { NavLink } from 'react-router-dom'
 
 
@@ -47,6 +47,10 @@ function Header() {
     {
       icon: "fa-solid fa-inbox",
       link: "mailto:marcherleyantoine@gmail.com.com"
+    },
+    {
+      icon: "fa-brands fa-telegram",
+      link: "https://t.me/Ekko3"
     }
   ]
 
@@ -58,7 +62,7 @@ function Header() {
         </div>
         <div>
           <h3>{info.name}</h3>
-          <p>{info.title} {info.location}</p>
+          <p><span>{info.title}&nbsp;</span>{info.location}</p>
         </div>
       </div>
       <div className='nav'>
