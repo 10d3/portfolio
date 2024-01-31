@@ -1,6 +1,6 @@
 import './header.css'
-import logo from '../../public/potrait.webp'
-import { Link } from 'react-router-dom'
+import logo from '../../src/potrait.webp'
+import { NavLink } from 'react-router-dom'
 
 
 function Header() {
@@ -65,7 +65,7 @@ function Header() {
         <ul>
           {
             links.map((element, index) => {
-              return <li key={index}><Link to={element.path} className='navlink' href="#">{element.navlink}</Link></li>
+              return <li key={index}><NavLink to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
             })
           }
         </ul>

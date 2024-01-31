@@ -72,3 +72,6 @@ p {
   font-family: "Open Sans", sans-serif;
   font-family: "Markazi Text", serif;
 }
+.navlink.active{
+  color: #fff;
+}
