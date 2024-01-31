@@ -1,10 +1,19 @@
 import './header.css'
+import { useContext } from 'react';
 import logo from '../../src/assets/logo.png'
 import { NavLink } from 'react-router-dom'
+import ThemeContext from '../../context/ThemeContext';
 
 
 function Header() {
-  const info ={
+
+  const { theme, updateTheme } = useContext(ThemeContext);
+
+  const toggleTheme = () => {
+    updateTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  const info = {
     name: 'Marc-Herley Antoine',
     title: 'Front-End Developer',
     location: 'In Haiti'
@@ -72,6 +81,9 @@ function Header() {
               return <li key={index}><NavLink to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
             })
           }
+          <button id='toggler' onClick={toggleTheme}>
+            {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+          </button>
         </ul>
       </div>
       <div className='copyright'>

@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&family=Open+Sans:ital@1&display=swap");
 :root {
-  --background: #fff;
-  --foreground: #d2d3db;
-  --color-text: #000;
-  --toggled-color: #000;
+  --background: #F0ECE3;
+  --foreground: #DFD3C3;
+  --color-text: #14213D;
+  --toggled-color: #A68DAD;
+  --link-nav : #FCA311;
 }
 
 [data-theme="dark"] {
-  --background: #000;
-  --foreground: #332940;
-  --color-text: #fff;
-  --toggled-color: #fff;
+  --background: #04293A;
+  --foreground: #14213D;
+  --color-text: #F0ECE3;
+  --toggled-color: #064663;
+  --link-nav : #FCA311;
 }
 
 .main-header {
@@ -28,6 +30,15 @@
   flex-direction: column;
   align-items: center;
 }
+.main-header .all .logTog{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  align-self: top;
+}
 .img-header {
   width: 40%;
   border-radius: 50%;
@@ -38,7 +49,7 @@
   border-radius: 50%;
 }
 .main-header .all div span{
-  color: var(--background);
+  color: var(--link-nav);
 }
 
 .nav ul {
@@ -47,7 +58,7 @@
 .nav ul li {
   padding-top: 0.6rem;
 }
-.nav ul li a {
+.nav ul li a, #toggler {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--color-text);
@@ -64,17 +75,25 @@
 }
 
 .nav ul li a:hover,
-.copyright a:hover {
-  color: var(--background);
+.copyright a:hover, #toggler {
+  color: var(--link-nav);
 }
 h3 {
   font-family: "Lato", sans-serif;
   font-size: 1.3rem;
+  color: var(--color-text);
 }
 p {
   font-family: "Open Sans", sans-serif;
   font-family: "Markazi Text", serif;
+  color: var(--color-text);
 }
 .navlink.active{
-  color: #fff;
+  color: var(--link-nav);
+}
+#toggler{
+  font-size: 1.8rem;
+  border: none;
+  background-color: var(--toggeled-color);
+  cursor: pointer;
 }

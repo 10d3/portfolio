@@ -1,17 +1,18 @@
 :root {
-  --background: #fff;
-  --foreground: #d2d3db;
-  --color-text: #000;
-  --toggled-color: #000;
+  --background: #F0ECE3;
+  --foreground: #DFD3C3;
+  --color-text: #14213D;
+  --toggled-color: #A68DAD;
+  --link-nav : #FCA311;
 }
 
 [data-theme="dark"] {
-  --background: #000;
-  --foreground: #332940;
-  --color-text: #fff;
-  --toggled-color: #fff;
+  --background: #04293A;
+  --foreground: #14213D;
+  --color-text: #F0ECE3;
+  --toggled-color: #064663;
+  --link-nav : #FCA311;
 }
-
 .main-home {
   display: flex;
   flex-direction: row;
@@ -30,12 +31,13 @@
 .sec-home #greet {
   width: 80%;
   font-size: 1.9rem;
+  color: var(--color-text);
   margin-bottom: 0.5rem;
   font-family: "Markazi Text", serif;
   line-height: 0.9;
 }
 .sec-home #greet .info {
-  color: var(--foreground);
+  color: var(--link-nav);
   font-size: 2.5rem;
   font-family: "Markazi Text", serif;
 }
@@ -43,14 +45,15 @@
   font-family: "Markazi Text", serif;
   width: 80%;
   text-align: justify;
+  color: var(--color-text);
   font-size: 1.2rem;
 }
 .sec-home p .name{
-    color: var(--foreground);
+    color: var(--link-nav);
     font-size: 1.5rem;
 }
 .sec-home p .lng{
-    color: var(--foreground);
+    color: var(--link-nav);
 }
 .sec-home .btn{
     width: 25%;
@@ -58,8 +61,8 @@
     margin-left: 3.8rem;
     margin-top: 0.5rem;
     text-decoration: none;
-    border: 1px solid var(--color-text);
-    color: var(--foreground);
+    border: 1px solid var(--link-nav);
+    color: var(--color-text);
     height: 1.2rem;
     border-radius: 5px;
     padding: 0.4rem;
