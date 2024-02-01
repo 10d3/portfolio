@@ -21,3 +21,9 @@
     justify-content: space-evenly;
     background-color: var(--background);
 }
+
+@media only screen and (max-width: 768px){
+  .main-body{
+    width: 100%;
+  }
+}

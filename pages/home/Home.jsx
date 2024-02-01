@@ -17,7 +17,10 @@ function Home() {
           a passionate front-end developer dedicated to creating engaging and user-friendly web experiences.
           With expertise in <span className='lng'>HTML, CSS, JavaScript and React</span>,
           I specialize in crafting responsive and visually appealing websites.</p>
-          <Link to='/projects' className='btn' type='button'>View Portfolio&nbsp;<i className="fa-solid fa-folder"></i></Link>
+        <div className='under-p'>
+          <Link to='/projects' className='btn' type='button'>Portfolio&nbsp;<i className="fa-solid fa-folder"></i></Link>
+          <Link to='/contact' className='btn' type='button'>Contact&nbsp;<i className="fa-solid fa-envelope"></i></Link>
+        </div>
       </div>
       <div className='sec-home'>
         <img className='imageP' src={imageP} alt="" />

@@ -1,18 +1,34 @@
 export const skills = [
     {
-        name: 'Web Development',
-        desc: ''
+        icon: 'fa-brands fa-html5',
+        desc: 'HTML'
     },
     {
-        name: 'UX/UI Design',
-        desc: ''
+        icon: 'fa-brands fa-css3-alt',
+        desc: 'CSS'
     },
     {
-        name: 'Git Version',
-        desc: ''
+        icon: 'fa-brands fa-sass',
+        desc: 'SASS'
     },
     {
-        name: 'Web Development',
-        desc: ''
+        icon: 'fa-brands fa-js',
+        desc: 'JS'
+    },
+    {
+        icon: 'fa-brands fa-react',
+        desc: 'REACT'
+    },
+    {
+        icon: 'fa-brands fa-git',
+        desc: 'GIT'
+    },
+    {
+        icon: 'fa-brands fa-github',
+        desc: 'GITHUB'
+    },
+    {
+        icon: 'fa-brands fa-bootstrap',
+        desc: 'BOOTSTRAP'
     }
 ]

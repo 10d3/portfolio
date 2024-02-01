@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&family=Open+Sans:ital@1&display=swap");
+:root {
+  --background: #f0ece3;
+  --foreground: #dfd3c3;
+  --color-text: #14213d;
+  --toggled-color: #a68dad;
+  --link-nav: #fca311;
+}
+
+[data-theme="dark"] {
+  --background: #04293a;
+  --foreground: #14213d;
+  --color-text: #f0ece3;
+  --toggled-color: #064663;
+  --link-nav: #fca311;
+}
+
+.main-contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.sec-contact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+form .form-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+form .form-div label {
+  color: var(--link-nav);
+  font-family: "Markazi Text", serif;
+  font-size: 1.8rem;
+}
+form .form-div textarea {
+  width: 20rem;
+  height: 4rem;
+}
+form .form-div input {
+  width: 20rem;
+  height: 2rem;
+}
+form button {
+  width: 5rem;
+  height: 1.8rem;
+  border-radius: 5px;
+  color: var(--color-text);
+  background-color: var(--link-nav);
+  border: none;
+  cursor: pointer;
+}

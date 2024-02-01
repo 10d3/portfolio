@@ -15,16 +15,20 @@ function About() {
         <div className='about-t'>
           <p>{info.desc}</p>
         </div>
-        <div className='sec-about'>
-          {
-            skills.map((element, index) => {
-              return (
-                <div className='card-p' key={index}>
-                  <h3 className='h3-card'>{element.name}</h3>
-                </div>
-              )
-            })
-          }
+        <div className='sec-f-about'>
+          <h3>My Skills</h3>
+          <div className='sec-about'>
+            {
+              skills.map((element, index) => {
+                return (
+                  <div className='icon-div' key={index}>
+                    <a className='icon-skill' href={element.link}><i className={element.icon}></i></a>
+                    <p>{element.desc}</p>
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
       </div>
     </div>
