@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './contact.css'
+import imageP from '../../src/assets/imageP.png'
 
 
 function Contact() {
@@ -16,7 +17,7 @@ function Contact() {
   return (
     <div className="main-contact">
       <div className='sec-contact'>
-        pic
+      <img src={imageP} alt="" />
       </div>
       <div className='sec-contact'>
         <form onSubmit={handleChange}>
