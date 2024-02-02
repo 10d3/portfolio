@@ -27,10 +27,14 @@ function Projects() {
                       <div className={`div-test ${activeStates[index] ? 'active' : ''}`}>
                         <button type="button" onClick={() => handleSetActive(index, false)}><i className="fa-solid fa-xmark"></i></button>
                         <div className="inside-test">
-                        <iframe width="50%" height="50%" src="https://www.youtube.com/embed/B1w07ogfWgQ?si=O_Im723AgAs_tYNH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <div className="inside-desc">
-                          <p>{element.desc}</p>
-                        </div>
+                          <div className="inside-deim">
+                            <video width="100%" height="50%" controls>
+                              <source src={`videos/${element.video}`} type="video/mp4" />
+                            </video>
+                          </div>
+                          <div className="inside-desc">
+                            <p>{element.desc}</p>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -109,7 +109,8 @@
     margin: auto;
     width: 50%;
     height: 70%;
-    border: 2px solid var(--link-nav);
+    border-radius: 2rem;
+    background-color: var(--foreground);
 }
 .procard .div-img .div-test button{
     background-color: var(--link-nav);
@@ -120,7 +121,9 @@
     width: 2rem;
     height: 2rem;
     margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
     border: none;
+    align-self: flex-end;
 }
 .procard .div-img .div-test button i{
     font-size: 1.2rem;
@@ -138,4 +141,13 @@
     align-items: center;
     width: 50%;
     height: 100%;
+    background-color: var(--foreground);
+    border-radius: 0 0 2rem 0;
+}
+.procard .div-img .div-test .inside-deim{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: var(--foreground);
+    border-radius: 0 0 0 2rem;
 }
