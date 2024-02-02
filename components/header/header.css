@@ -1,19 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Markazi+Text:wght@500&family=Open+Sans:ital@1&display=swap");
 :root {
-  --background: #F0ECE3;
-  --foreground: #DFD3C3;
-  --color-text: #14213D;
-  --toggled-color: #A68DAD;
-  --link-nav : #FCA311;
+  --background: #f0ece3;
+  --foreground: #dfd3c3;
+  --color-text: #14213d;
+  --toggled-color: #a68dad;
+  --link-nav: #fca311;
+  --mob: #fff;
 }
 
 [data-theme="dark"] {
-  --background: #04293A;
-  --foreground: #14213D;
-  --color-text: #F0ECE3;
+  --background: #04293a;
+  --foreground: #14213d;
+  --color-text: #f0ece3;
   --toggled-color: #064663;
-  --link-nav : #FCA311;
+  --link-nav: #fca311;
+  --mob: #000;
 }
 
 .main-header {
@@ -25,12 +27,23 @@
   justify-content: space-evenly;
   background-color: var(--foreground);
 }
+.main-header .desk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.mob {
+  display: none;
+}
 .main-header .all {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-header .all .logTog{
+.main-header .all .logTog {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -48,7 +61,7 @@
   height: auto;
   border-radius: 50%;
 }
-.main-header .all div span{
+.main-header .all div span {
   color: var(--link-nav);
 }
 
@@ -58,7 +71,8 @@
 .nav ul li {
   padding-top: 0.6rem;
 }
-.nav ul li a, #toggler {
+.nav ul li a,
+#toggler {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--color-text);
@@ -75,7 +89,8 @@
 }
 
 .nav ul li a:hover,
-.copyright a:hover, #toggler {
+.copyright a:hover,
+#toggler {
   color: var(--link-nav);
 }
 h3 {
@@ -88,19 +103,66 @@ p {
   font-family: "Markazi Text", serif;
   color: var(--color-text);
 }
-.navlink.active{
+.navlink.active {
   color: var(--link-nav);
 }
-#toggler{
+#toggler {
   font-size: 1.8rem;
   border: none;
   background-color: var(--toggeled-color);
   cursor: pointer;
 }
 
-
-@media only screen and (max-width: 768px){
-  .main-header{
+@media only screen and (max-width: 768px) {
+  .main-header {
+    height: 8%;
+    width: 100%;
+  }
+  .main-header .mob {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-header .mob div {
     display: none;
+  }
+  .main-header .mob div ul {
+    list-style-type: none;
+  }
+  .main-header .mob div ul li {
+    padding-left: 0.2rem;
+  }
+  .main-header .mob nav div li .navlink {
+  }
+  .main-header .mob div.active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8%;
+    height: 92%;
+    width: 100%;
+    background-color: var(--foreground);
+    z-index: 10000;
+  }
+  .main-header .desk {
+    display: none;
+  }
+  .togglere {
+    width: 32px;
+    height: 32px;
+    margin-left: 0.4rem;
+  }
+  .togglere i {
+    width: 100%;
+    height: 100%;
+  }
+  #toggler:last-child {
+    margin-right: 0.4rem;
   }
 }

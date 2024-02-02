@@ -1,5 +1,5 @@
 import './header.css'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import logo from '../../src/assets/logo.png'
 import { NavLink } from 'react-router-dom'
 import ThemeContext from '../../context/ThemeContext';
@@ -63,35 +63,60 @@ function Header() {
     }
   ]
 
+  const [ham, setHam] = useState(false);
+
   return (
     <div className="main-header">
-      <div className='all'>
-        <div className='img-header'>
-          <img src={logo} alt="" />
-        </div>
-        <div>
-          <h3>{info.name}</h3>
-          <p><span>{info.title}&nbsp;</span>{info.location}</p>
-        </div>
-      </div>
-      <div className='nav'>
-        <ul>
+      <div className='mob'>
+        <button id='toggler' className='togglere' onClick={() => setHam(!ham)}>
           {
-            links.map((element, index) => {
-              return <li key={index}><NavLink to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
+            ham ? <i className="fa-solid fa-xmark"></i>  : <i className="fa-solid fa-bars"></i>
+          }
+        </button>
+        <div className={`nav ${ham ? 'active' : ''}`} >
+          <ul>
+            {
+              links.map((element, index) => {
+                return <li key={index}><NavLink onClick={() => setHam(!ham)} to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
+              })
+            }
+          </ul>
+        </div>
+        <button id='toggler' onClick={toggleTheme}>
+          {
+            theme === 'light' ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>
+          }
+        </button>
+      </div>
+      <div className='desk'>
+        <div className='all'>
+          <div className='img-header'>
+            <img src={logo} alt="" />
+          </div>
+          <div>
+            <h3>{info.name}</h3>
+            <p><span>{info.title}&nbsp;</span>{info.location}</p>
+          </div>
+        </div>
+        <div className='nav'>
+          <ul>
+            {
+              links.map((element, index) => {
+                return <li key={index}><NavLink to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
+              })
+            }
+            <button id='toggler' onClick={toggleTheme}>
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </button>
+          </ul>
+        </div>
+        <div className='copyright'>
+          {
+            social.map((element, index) => {
+              return <a key={index} href={element.link}><i className={element.icon}></i></a>
             })
           }
-          <button id='toggler' onClick={toggleTheme}>
-            {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-          </button>
-        </ul>
-      </div>
-      <div className='copyright'>
-        {
-          social.map((element, index) => {
-            return <a key={index} href={element.link}><i className={element.icon}></i></a>
-          })
-        }
+        </div>
       </div>
     </div>
   )

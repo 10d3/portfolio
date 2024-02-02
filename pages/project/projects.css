@@ -1,18 +1,18 @@
 :root {
-    --background: #f0ece3;
-    --foreground: #dfd3c3;
-    --color-text: #14213d;
-    --toggled-color: #a68dad;
-    --link-nav: #fca311;
-  }
-  
-  [data-theme="dark"] {
-    --background: #04293a;
-    --foreground: #14213d;
-    --color-text: #f0ece3;
-    --toggled-color: #064663;
-    --link-nav: #fca311;
-  }
+  --background: #f0ece3;
+  --foreground: #dfd3c3;
+  --color-text: #14213d;
+  --toggled-color: #a68dad;
+  --link-nav: #fca311;
+}
+
+[data-theme="dark"] {
+  --background: #04293a;
+  --foreground: #14213d;
+  --color-text: #f0ece3;
+  --toggled-color: #064663;
+  --link-nav: #fca311;
+}
 
 .main-pro {
   width: 100%;
@@ -25,8 +25,14 @@
 .sec-pro {
   width: 100%;
 }
-.one-pro{
-    height: 20%;
+.one-pro {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+.one-pro h3 {
+  font-size: 2.5rem;
+  padding-left: 10%;
 }
 .all-pro {
   width: 100%;
@@ -40,63 +46,127 @@
 .procard {
   width: 30%;
   height: 40%;
-  border: 2px solid var(--link-nav);;
+  border: 2px solid var(--link-nav);
   border-radius: 0.4rem;
 }
-.procard .div-img{
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.4rem 0.4rem 0 0;
+.procard .div-img {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 .procard img {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    border-radius: 0.4rem 0.4rem 0 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
-.procard .div-text{
-    background-color: var(--foreground);
-    height: 20%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 0 0 0.4rem 0.4rem;
+.procard .div-text {
+  background-color: var(--foreground);
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0 0 0.4rem 0.4rem;
 }
-.procard .div-text h2{
-    color: var(--color-text);
+.procard .div-text h2 {
+  color: var(--color-text);
 }
-.procard .div-text .element{
-    display: flex;
-    width: 30%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.procard .div-text .element {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.procard .div-text .element i{
-    font-size: 1.3rem;
-    color: var(--color-text);
+.procard .div-text .element i {
+  font-size: 1.3rem;
+  color: var(--color-text);
 }
-.procard .div-text .element i:hover{
-    color: var(--link-nav);
+.procard .div-text .element i:hover {
+  color: var(--link-nav);
 }
-.procard .div-text a{
-    text-decoration: none;
+.procard .div-text a {
+  text-decoration: none;
 }
-.procard .div-text a i{
-    font-size: 1.3rem;
-    color: var(--link-nav);
+.procard .div-text a i {
+  font-size: 1.3rem;
+  color: var(--link-nav);
 }
 
-.procard .div-img .div-test{
-    display: none;
+.procard .div-img .div-test {
+  display: none;
 }
-.procard .div-img .div-test.active{
+.procard .div-img .div-test.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  margin: auto;
+  width: 50%;
+  height: 70%;
+  border-radius: 2rem;
+  background-color: var(--foreground);
+}
+.procard .div-img .div-test button {
+  background-color: var(--link-nav);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: 3rem;
+  padding: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
+  border: none;
+  align-self: flex-end;
+}
+.procard .div-img .div-test button i {
+  font-size: 1.2rem;
+}
+.procard .div-img .div-test .inside-test {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background);
+  width: 100%;
+  height: 100%;
+}
+.procard .div-img .div-test .inside-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: var(--foreground);
+  border-radius: 0 0 2rem 0;
+}
+.procard .div-img .div-test .inside-deim {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: var(--foreground);
+  border-radius: 0 0 0 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .all-pro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .procard {
+    width: 80%;
+    height: auto;
+  }
+  .procard .div-img .div-test.active {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,47 +177,32 @@
     left: 5%;
     right: 5%;
     margin: auto;
-    width: 50%;
-    height: 70%;
-    border-radius: 2rem;
+    width: 90%;
+    height: 80%;
+    border-radius: 0.8rem;
     background-color: var(--foreground);
-}
-.procard .div-img .div-test button{
-    background-color: var(--link-nav);
-    color: var(--color-text);
-    cursor: pointer;
-    border-radius: 3rem;
-    padding: 0.1rem;
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 0.3rem;
-    margin-top: 0.3rem;
-    border: none;
-    align-self: flex-end;
-}
-.procard .div-img .div-test button i{
-    font-size: 1.2rem;
-}
-.procard .div-img .div-test .inside-test{
+  }
+  .procard .div-img .div-test .inside-test {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--background);
     width: 100%;
     height: 100%;
-}
-.procard .div-img .div-test .inside-desc{
+  }
+  .procard .div-img .div-test .inside-deim {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: var(--foreground);
+    border-radius: 0 0 0 2rem;
+  }
+  .procard .div-img .div-test .inside-desc {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
     background-color: var(--foreground);
     border-radius: 0 0 2rem 0;
-}
-.procard .div-img .div-test .inside-deim{
-    display: flex;
-    width: 50%;
-    height: 100%;
-    background-color: var(--foreground);
-    border-radius: 0 0 0 2rem;
+  }
 }

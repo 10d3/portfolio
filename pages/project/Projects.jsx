@@ -16,7 +16,9 @@ function Projects() {
     <>
       {
         pro ? (<div className="main-pro">
-          <div className="sec-pro one-pro">Projects</div>
+          <div className="sec-pro one-pro">
+            <h3>Project</h3>
+          </div>
           <div className="sec-pro all-pro">
             {
               pro.map((element, index) => {
