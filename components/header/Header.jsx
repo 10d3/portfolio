@@ -70,7 +70,7 @@ function Header() {
       <div className='mob'>
         <button id='toggler' className='togglere' onClick={() => setHam(!ham)}>
           {
-            ham ? <i className="fa-solid fa-xmark"></i>  : <i className="fa-solid fa-bars"></i>
+            ham ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>
           }
         </button>
         <div className={`nav ${ham ? 'active' : ''}`} >
@@ -81,6 +81,13 @@ function Header() {
               })
             }
           </ul>
+          <div className='copyright'>
+          {
+            social.map((element, index) => {
+              return <a key={index} href={element.link}><i className={element.icon}></i></a>
+            })
+          }
+        </div>
         </div>
         <button id='toggler' onClick={toggleTheme}>
           {
