@@ -74,7 +74,7 @@
 .nav ul li a,
 #toggler {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--color-text);
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -85,7 +85,6 @@
   padding-left: 0.4rem;
   color: var(--color-text);
   font-family: "Lato", sans-serif;
-  font-family: "Markazi Text", serif;
 }
 
 .nav ul li a:hover,
@@ -94,13 +93,12 @@
   color: var(--link-nav);
 }
 h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   color: var(--color-text);
 }
 p {
-  font-family: "Open Sans", sans-serif;
-  font-family: "Markazi Text", serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--color-text);
 }
 .navlink.active {

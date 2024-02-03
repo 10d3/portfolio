@@ -22,28 +22,20 @@ export const pro = [
         icon: 'fa-brands fa-github'
     },
     {
-        name: 'Weather',
+        name: 'HablaconElena',
         desc: 'La voiture roule a 90km/h',
-        image: 'porfolio.png',
+        image: 'hablaconelena.png',
         tag: [
             {
-                icon: 'fa-brands fa-html5',
-                desc: 'HTML'
-            },
-            {
-                icon: 'fa-brands fa-css3-alt',
-                desc: 'CSS'
-            },
-            {
-                icon: 'fa-brands fa-react',
-                desc: 'REACT'
+                icon: 'fa-brands fa-wordpress',
+                desc: 'WORDPRESS'
             }
         ],
-        url: '#',
-        icon: 'fa-brands fa-github'
+        url: 'https://hablaconelena.es/',
+        icon: 'fa-solid fa-globe'
     },
     {
-        name: 'Portfolio',
+        name: 'Weather',
         desc: 'Le chien joue dans le parc',
         image: 'porfolio.png',
         tag: [
