@@ -13,13 +13,10 @@ function Home() {
     <div className="main-home">
       <div className='sec-home'>
         <h2 id='greet'>{info.greet}<br /><span className='info'>{info.profession}</span></h2>
-        <p>Hello, I am <span className='name'>{info.ptext}</span>,
-          a passionate front-end developer dedicated to creating engaging and user-friendly web experiences.
-          With expertise in <span className='lng'>HTML, CSS, JavaScript and React</span>,
-          I specialize in crafting responsive and visually appealing websites.</p>
+        <p>Greetings, I'm <span className='name'>{info.ptext}</span>, a dedicated front-end developer driven by a deep passion for creating immersive and user-friendly web experiences. My journey in web development has equipped me with expertise in a range of technologies, including HTML, CSS, JavaScript, and React.</p>
         <div className='under-p'>
           <Link to='/projects' className='btn' type='button'>Portfolio&nbsp;<i className="fa-solid fa-folder"></i></Link>
-          <Link to='/contact' className='btn' type='button'>Contact&nbsp;<i className="fa-solid fa-envelope"></i></Link>
+          <a className='cer' href="certificat.pdf" download>Certificat&nbsp;<i className="fa-solid fa-download"></i></a>
         </div>
       </div>
       <div className='sec-home'>

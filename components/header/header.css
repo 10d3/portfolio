@@ -143,7 +143,7 @@ p {
     justify-content: space-evenly;
     position: absolute;
     top: 8%;
-    height: 92%;
+    height: 100%;
     width: 100%;
     background-color: var(--foreground);
     z-index: 10000;

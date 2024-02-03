@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap');
 :root {
-  --background: #F0ECE3;
-  --foreground: #DFD3C3;
-  --color-text: #14213D;
-  --toggled-color: #A68DAD;
-  --link-nav : #FCA311;
+  --background: #f0ece3;
+  --foreground: #e8d5c6;
+  --color-text: #14213d;
+  --toggled-color: #a68dad;
+  --link-nav: #fca311;
 }
 
 [data-theme="dark"] {
-  --background: #04293A;
-  --foreground: #14213D;
-  --color-text: #F0ECE3;
+  --background: #04293a;
+  --foreground: #14213d;
+  --color-text: #f0ece3;
   --toggled-color: #064663;
-  --link-nav : #FCA311;
+  --link-nav: #fca311;
 }
 .main-home {
   display: flex;
@@ -64,7 +64,7 @@
 .sec-home p .lng{
     color: var(--link-nav);
 }
-.sec-home .btn{
+.sec-home .btn, .sec-home .cer{
     width: 25%;
     /* align-self: flex-start;
     margin-left: 3.8rem;

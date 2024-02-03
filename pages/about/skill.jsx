@@ -30,5 +30,13 @@ export const skills = [
     {
         icon: 'fa-brands fa-bootstrap',
         desc: 'BOOTSTRAP'
+    },
+    {
+        icon: 'fa-brands fa-wordpress',
+        desc: 'WORDPRESS'
+    },
+    {
+        icon:'fa-brands fa-shopify',
+        desc: 'SHOPIFY'
     }
 ]

@@ -16,7 +16,6 @@ function Header() {
   const info = {
     name: 'Marc-Herley Antoine',
     title: 'Front-End Developer',
-    location: 'In Haiti'
   }
   const links = [
     {
@@ -102,7 +101,7 @@ function Header() {
           </div>
           <div>
             <h3>{info.name}</h3>
-            <p><span>{info.title}&nbsp;</span>{info.location}</p>
+            <p><span>{info.title}</span></p>
           </div>
         </div>
         <div className='nav'>
