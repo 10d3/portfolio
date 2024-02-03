@@ -37,7 +37,7 @@ export const pro = [
     {
         name: 'Weather',
         desc: 'Le chien joue dans le parc',
-        image: 'porfolio.png',
+        image: 'weather.png',
         tag: [
             {
                 icon: 'fa-brands fa-html5',
