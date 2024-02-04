@@ -93,4 +93,20 @@
     width: 100%;
     height: 50%;
   }
+  .sec-home #greet{
+    width: 95%;
+    font-size: 1.5rem;
+    margin: 0.6rem 0 0;
+  }
+  .sec-home p{
+    width: 95%;
+    font-size: 1rem;
+  }
+  .sec-home .under-p{
+    width: 95%;
+  }
+  .sec-home .under-p .btn, .sec-home .under-p .cer{
+    height: 1rem;
+    font-size: 0.8rem;
+  }
 }

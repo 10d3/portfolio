@@ -31,14 +31,6 @@
   font-size: 2.5rem;
   padding-left: 10%;
 }
-.first-about h3:after {
-  content: "";
-  position: absolute;
-  background-color: var(--link-nav);
-  height: 3px;
-  width: 10%;
-  border-radius: 3px;
-}
 /* .about-t h3:before{
     content: "";
     width: 0.3rem;
@@ -112,8 +104,13 @@
   .main-about {
     width: 100%;
   }
+  .first-about{
+    height: 10%;
+  }
   .prin-sec-about {
     flex-direction: column;
+    overflow: auto;
+    height: 90%;
   }
   .about-t,
   .sec-f-about {
@@ -122,6 +119,16 @@
   .sec-about {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+  }
+  .about-t p{
+    width: 92%;
+    font-size: 1rem;
+  }
+  .icon-div .icon-skill{
+    font-size: 3rem;
+  }
+  .icon-div p{
+    font-size: 0.8rem;
   }
 }

@@ -5,9 +5,7 @@ function About() {
   const info = {
     about: 'About Me',
     desc: [ 'In the realm of HTML, I meticulously structure content to ensure optimal accessibility and semantic clarity. With CSS, I bring designs to life, utilizing styles that not only enhance aesthetics but also contribute to a seamless user interface. My proficiency in JavaScript empowers me to add dynamic and interactive elements, enhancing the overall user engagement.',
-    'One of my focal points is leveraging React to build scalable and efficient user interfaces. This powerful library allows me to create modular components, fostering maintainability and enhancing the overall development process. I take pride in my ability to blend creativity with functionality, resulting in websites that not only meet but exceed user expectations.',
-    'In my pursuit of excellence, I specialize in crafting responsive designs that adapt seamlessly to various devices and screen sizes. This ensures that the user experience remains optimal, regardless of the platform.',
-    'Lets collaborate to transform your ideas into visually stunning and highly functional websites.']
+    'One of my focal points is leveraging React to build scalable and efficient user interfaces. This powerful library allows me to create modular components, fostering maintainability and enhancing the overall development process. I take pride in my ability to blend creativity with functionality, resulting in websites that not only meet but exceed user expectations.']
   }
   return (
     <div className="main-about">
