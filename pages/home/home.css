@@ -93,9 +93,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 1rem 0.6rem;
+  padding: 0.9rem 0.4rem;
   background-color: var(--link-nav);
-  border-radius: 20px;
+  border-radius: 30px;
   text-decoration: none;
   color: var(--color-text);
   font-family: "Lato", sans-serif;
