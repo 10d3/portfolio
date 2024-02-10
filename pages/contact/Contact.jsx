@@ -20,7 +20,7 @@ function Contact() {
       <img src={imageP} alt="" />
       </div>
       <div className='sec-contact'>
-        <form onSubmit={handleChange}>
+        <form onSubmit={handleChange} netlify>
           <div className="form-div">
             <label htmlFor="name">Name</label>
             <input onChange={(e) => {setName(e.target.value)}} type="text" name="name" id="name" placeholder="John Doe" />

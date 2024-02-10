@@ -7,7 +7,7 @@ import ThemeContext from '../../context/ThemeContext';
 
 function Header() {
 
-  const { theme, updateTheme } = useContext(ThemeContext);
+  const { theme, updateTheme, links } = useContext(ThemeContext);
 
   const toggleTheme = () => {
     updateTheme(theme === 'light' ? 'dark' : 'light');
@@ -17,28 +17,6 @@ function Header() {
     name: 'Marc-Herley Antoine',
     title: 'Front-End Developer',
   }
-  const links = [
-    {
-      navlink: 'Home',
-      path: '/'
-    },
-    {
-      navlink: 'About',
-      path: '/about'
-    },
-    {
-      navlink: 'Blog',
-      path: '/blog'
-    },
-    {
-      navlink: 'Projects',
-      path: '/projects'
-    },
-    {
-      navlink: 'Contact',
-      path: '/contact'
-    }
-  ]
   const social = [
     {
       icon: "fa-brands fa-github",
@@ -72,11 +50,12 @@ function Header() {
             ham ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>
           }
         </button>
+        <h2>herley</h2>
         <div className={`nav ${ham ? 'active' : ''}`} >
           <ul>
             {
               links.map((element, index) => {
-                return <li key={index}><NavLink onClick={() => setHam(!ham)} to={element.path} className='navlink' href="#">{element.navlink}</NavLink></li>
+                return <li key={index}><NavLink onClick={() => setHam(!ham)} to={element.path} className='navlink' href='#'>{element.navlink}</NavLink></li>
               })
             }
           </ul>

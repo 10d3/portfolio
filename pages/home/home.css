@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap");
 :root {
   --background: #f0ece3;
   --foreground: #e8d5c6;
@@ -16,97 +17,129 @@
 }
 .main-home {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.main-home .main-sub {
+  width: 85%;
+  height: 65%;
+  display: flex;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.sec-home {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sec-home:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec-home .img-pre {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #fca311;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-home .img-pre img {
   width: 100%;
   height: 100%;
 }
-.sec-home {
-  width: 50%;
-  height: 100%;
+.sec-home .text-pre {
+  width: 65%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* line-height: 1.3; */
 }
-.sec-home #greet {
-  width: 80%;
-  font-size: 1.9rem;
+.sec-home .text-pre h2,
+.sec-home .text-pre p,
+.sec-home .text-pre h3 {
   color: var(--color-text);
-  margin-bottom: 0.5rem;
-  font-family: "Markazi Text", serif;
-  line-height: 0.9;
 }
-.sec-home #greet .info {
-  color: var(--link-nav);
-  font-size: 2.4rem;
-  font-family: 'Montserrat', sans-serif;
+.sec-home .text-pre h2 {
+  font-size: 1.4rem;
 }
-.sec-home p {
-  font-family: 'Montserrat', sans-serif;
-  width: 80%;
-  text-align: justify;
-  color: var(--color-text);
-  font-size: 1.1rem;
+.sec-home .text-pre p {
+  font-size: 1rem;
 }
-.under-p{
+.sec-home .text-pre h3 {
+  font-size: 1.7rem;
+}
+.sec-home .button-div {
+  margin-top: 1rem;
+  width: 60%;
   display: flex;
-  width: 80%;
   flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 0;
 }
-.sec-home p .name{
-    color: var(--link-nav);
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-}
-.sec-home p .lng{
-    color: var(--link-nav);
-}
-.sec-home .btn, .sec-home .cer{
-    width: 25%;
-    /* align-self: flex-start;
-    margin-left: 3.8rem;
-    margin-top: 0.5rem; */
-    text-decoration: none;
-    border: 1px solid var(--link-nav);
-    color: var(--color-text);
-    height: 1.2rem;
-    border-radius: 5px;
-    padding: 0.4rem;
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    align-items: center;
-}
-.sec-home .imageP{
-    width: 80%;
+.sec-home .button-div .btn,
+.cer {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.3rem;
+  background-color: var(--link-nav);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: "Lato", sans-serif;
 }
 
-@media only screen and (max-width: 768px){
-  .main-home{
+@media only screen and (max-width: 768px) {
+  .main-home .main-sub {
     flex-direction: column;
-  }
-  .sec-home{
     width: 100%;
+    height: 75%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .sec-home:first-child {
+    width: 80%;
     height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .sec-home #greet{
-    width: 95%;
-    font-size: 1.5rem;
-    margin: 0.6rem 0 0;
+  .sec-home:last-child {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .sec-home p{
-    width: 95%;
-    font-size: 1rem;
+  .sec-home .text-pre {
+    width: 100%;
   }
-  .sec-home .under-p{
-    width: 95%;
+  .sec-home .text-pre h2 {
+    font-size: 1.8rem;
   }
-  .sec-home .under-p .btn, .sec-home .under-p .cer{
-    height: 1rem;
-    font-size: 0.8rem;
+  .sec-home .text-pre p {
+    font-size: 1.2rem;
   }
+  .sec-home .text-pre h3 {
+    font-size: 1.6rem;
+  }
+  .sec-home .button-div {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+  /* .sec-home .button-div .btn, .cer{
+    justify-content: space-evenly;
+  } */
 }

@@ -6,6 +6,29 @@ import ThemeContext from "../context/ThemeContext"
 
 function App() {
 
+  const links = [
+    {
+      navlink: 'Home',
+      path: '/',
+      refere:'home'
+    },
+    {
+      navlink: 'About',
+      path: '/about',
+      refere:'about'
+    },
+    {
+      navlink: 'Blog',
+      path: '/blog',
+      refere:'blog'
+    },
+    {
+      navlink: 'Projects',
+      path: '/projects',
+      refere:'projects'
+    },
+  ]
+
   const [theme, setTheme] = useState(() => {
 		const initialTheme = localStorage.getItem("theme");
 		return initialTheme ? initialTheme : "light";
@@ -17,14 +40,16 @@ function App() {
 
   const contextValue = {
     theme,
-    updateTheme: setTheme
+    updateTheme: setTheme,
+    links
   };
+
 
   return (
     <ThemeContext.Provider value={contextValue}>
     <div className="main" data-theme={theme}>
-      <Header data={{setTheme, theme}}/>
-      <Body/>
+      <Header data={{setTheme, theme, links}} />
+      <Body data={links} />
     </div>
     </ThemeContext.Provider>
   )

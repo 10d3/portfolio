@@ -1,7 +1,7 @@
 export const pro = [
     {
         name: 'Portfolio',
-        desc: 'A modern website crafted with React, CSS, and HTML. Features include an interactive interface, dynamic content with React, and an elegant design using CSS. Skills and projects are showcased, and the site is navigable with React Router. It is designed to be responsive for a seamless experience on all devices.',
+        desc: 'A modern website crafted with React, CSS, and HTML. Features include an interactive interface, dynamic content with React, and an elegant design using CSS. Skills and projects are showcased, and the site is navigable with React Router.',
         image: 'porfolio.png',
         video: 'video-test.mp4',
         tag: [
