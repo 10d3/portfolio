@@ -1,6 +1,5 @@
 import './header.css'
 import { useContext, useState } from 'react';
-import logo from '../../src/assets/logo.png'
 import { NavLink } from 'react-router-dom'
 import ThemeContext from '../../context/ThemeContext';
 
@@ -13,10 +12,6 @@ function Header() {
     updateTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  const info = {
-    name: 'Marc-Herley Antoine',
-    title: 'Front-End Developer',
-  }
   const social = [
     {
       icon: "fa-brands fa-github",
@@ -75,13 +70,7 @@ function Header() {
       </div>
       <div className='desk'>
         <div className='all'>
-          <div className='img-header'>
-            <img src={logo} alt="" />
-          </div>
-          <div>
-            <h3>{info.name}</h3>
-            <p><span>{info.title}</span></p>
-          </div>
+            <h1 className='logo'>Herley</h1>
         </div>
         <div className='nav'>
           <ul>

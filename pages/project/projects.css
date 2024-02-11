@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap");
 :root {
   --background: #f0ece3;
   --foreground: #dfd3c3;
@@ -15,11 +15,13 @@
   --link-nav: #fca311;
 }
 
-h1, h2, h3{
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
-p{
-  font-family: 'Open Sans', sans-serif;
+p {
+  font-family: "Open Sans", sans-serif;
 }
 
 .main-pro {
@@ -53,43 +55,119 @@ p{
   justify-content: space-evenly;
   padding: auto;
 }
-.sec-pro .card{
-  width: 325px;
-  height: 374px;
-  /* padding: 0.6rem; */
-  border-radius: 0.6rem;
-  background-color: var(--background);
-  box-shadow: 0px 2px 4px black;
+/* .sec-pro{
+  position: relative;
+  z-index: 99;
+} */
+.card-list {
+  width: 90%;
+  max-width: 400px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(#000, 0.05), 0 20px 50px 0 rgba(#000, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 1.25rem;
+  /* position: relative; */
+  transition: 0.15s ease-in;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0 0 2px #16c79a, 0 10px 60px 0 rgba(#000, 0.1);
+    transform: translatey(-5px);
+  }
+}
+
+.card-image {
+  border-radius: 10px;
   overflow: hidden;
 }
-.sec-pro .card img{
-  width: 100%;
-  border-radius: 0.6rem 0.6rem 0 0;
-  height: auto;
+
+.card-header {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
 }
-.card-text{
-  padding: 16px;
-}
-.card-text h2{
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-}
-.card-text p{
-  font-size: 0.9rem;
-  line-height: 1.3;
-  text-align: justify;
-}
-.card-text button{
-  background-color: var(--link-nav);
-  border-radius: 4px;
-  border: none;
-  padding: 0.2rem;
-  margin-top: 0.2rem;
+
+.icon-button {
+  border: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  transition: 0.25s ease;
+  box-shadow: 0 0 0 1px rgba(#000, 0.05), 0 3px 8px 0 rgba(#000, 0.15);
+  /* z-index: 1; */
   cursor: pointer;
+  color: #565656;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+  &:hover,
+  &:focus {
+    background-color: #ec4646;
+    color: #fff;
+  }
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.card-footer {
+  margin-top: 1.25rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  color: #787878;
+  &:first-child:after {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: currentcolor;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.25em;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .one-pro{
+  .main-pro{
+    overflow: auto;
+  }
+  .one-pro {
     height: 10%;
     display: flex;
     align-items: center;
@@ -102,49 +180,5 @@ p{
     gap: 20px;
     justify-items: center;
     align-items: center;
-    overflow: auto;
-  }
-  .procard {
-    width: 80%;
-    height: auto;
-  }
-  .procard .div-img .div-test.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    top: 5%;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
-    margin: auto;
-    width: 90%;
-    height: 80%;
-    border-radius: 0.8rem;
-    background-color: var(--foreground);
-  }
-  .procard .div-img .div-test .inside-test {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background);
-    width: 100%;
-    height: 100%;
-  }
-  .procard .div-img .div-test .inside-deim {
-    display: flex;
-    width: 100%;
-    height: 50%;
-    background-color: var(--foreground);
-    border-radius: 0 0;
-  }
-  .procard .div-img .div-test .inside-desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
-    background-color: var(--foreground);
-    border-radius: 0 0 2rem 2rem;
   }
 }
